@@ -1,0 +1,318 @@
+:root  {
+  --couleur1: #933645;
+  --couleur2: #17cd28;
+  --fontTitresMenu : "megan_juneregular";
+  --texteFondDark : #fff;
+  --couleurFondDark: #000;
+  --couleurFondInter: #DDDCDC;
+  --couleurFondLight : #FFF;
+  --fontTextes : "cabinregular";
+}
+
+/* Polices : Megan June Regular */
+@font-face {
+  font-family: "megan_juneregular";
+  src: url("font/megan_june-webfont.woff2") format("woff2"),
+    url("font/megan_june-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'cabinregular';
+    src: url('font/cabin-regular-webfont.woff2') format('woff2'),
+         url('font/cabin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*
+{
+margin: 0;
+padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+
+.Container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.FontInter {
+    background-color: var(--couleurFondInter);
+}
+
+.majuscules{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+body {
+    font-family: var(--fontTextes);
+    font-size: 18px;
+}
+
+/* HEADER*/
+
+#Bandeau {
+    font-family: var(--fontTitresMenu);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Bandeau #Logo {
+    width: 20%;
+}
+
+#Bandeau #Logo a {
+    font-size:3.5rem;
+    color:black;
+    border-bottom: 14px solid var(--couleur1);
+}
+
+#Bandeau #Menu {
+    width: 60%;
+}
+
+#Bandeau #Menu ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+#Bandeau #Menu ul li {
+    margin-left: 5%;
+}
+
+#Bandeau #Menu ul li a{
+    color: black;
+    padding-bottom: 8px;
+
+}
+
+#Bandeau #Menu ul li a:hover{
+    border-bottom: 14px solid var(--couleur2);
+    
+}
+
+#Bandeau #Menu ul li a.Principale {
+     border-bottom: 14px solid var(--couleur2);
+}
+
+/* Main*/
+
+#Contenu {
+    margin-top: 24px;
+}
+
+/* Enavant*/
+
+#Enavant {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 1%;
+}
+
+#Enavant .Categories {
+    width: 32%;
+    background-color: var(--couleurFondLight);
+    border: 1px solid #999898;
+    box-sizing: border-box;
+    padding: 32px 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#Enavant .Categories:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+#Enavant .Categories img {
+    display: block;
+    width:76px ;
+    margin: 0% auto 24px;
+}
+
+#Enavant .Categories hr {
+    width: 12%;
+    color: var(--couleur1);
+    margin-bottom: 12px;
+}
+
+#Enavant .Categories a h2 {
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+#Enavant .Categories p{
+    width: 75%;
+    line-height: 30px;
+    text-align: center;
+}
+
+/*Bienvenue*/
+
+#Bienvenue {
+    background-color: var(--couleurFondLight);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px ;
+}
+
+#Bienvenue #TitreVisuel {
+    width: 35%;
+}
+
+#Bienvenue #TitreVisuel h1 {
+    font-family: var(--fontTitresMenu);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-left: 6%;
+}
+
+#Bienvenue #TitreVisuel img{
+    width: 100%;
+}
+
+#Bienvenue #TexteListe {
+    width: 60%;
+}
+
+#Bienvenue #TexteListe hr{
+    width: 5%;
+    color: var(--couleur1);
+    margin-top: 16px;
+}
+
+#Bienvenue #TexteListe p {
+    margin: 48px 0;
+    width: 80%;
+}
+
+#Bienvenue #TexteListe ul{
+    width: 70%;
+    column-count: 2;
+    column-gap: 5%;
+    padding-bottom: 40px;
+}
+
+#Bienvenue #TexteListe ul li a{
+    font-family: var(--fontTitresMenu);
+    font-size: 1.5rem;
+    color: black;
+    line-height: 35px;
+    background-image: url(images-garden/feuille-picto.jpg);
+    background-repeat: no-repeat;
+    padding-left: 48px;
+    background-position: left 2px;
+}
+
+a.Bouton {
+    color: #FFF;
+    padding: 10px 1%;
+    background-color: var(--couleur2);
+    border-radius:4px;
+}
+
+/*Pub*/
+
+#pub{ 
+    background-image: url(images-garden/home-05.jpg);
+    background-size: cover;
+    height: 200px;
+    margin-top: -4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fontTitresMenu);
+    color: var(--couleurFondDark);
+    font-size: 2rem;
+}
+
+/*Footer*/
+
+#pied {
+    background-color: var(--couleurFondDark);
+    color: var(--couleurFondLight);
+    font-family: var(--fontTitresMenu);
+    min-height: 170px;
+    box-sizing: border-box;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#pied address{
+    font-style: normal;
+}
+
+#pied .colonne{
+    width: 48%;
+}
+
+#pied .colonne .reseaux {
+    margin-top: 16px;
+}
+
+#pied .colonne .reseaux a {
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+#pied .colonne:last-child{
+    text-align: right;
+}
+
+#pied .colonne:last-child a{
+    color: var(--couleurFondLight);
+}
+#pied .colonne:last-child a:hover{
+    text-decoration:underline ;
+}
+
+#pied .colonne:last-child p{
+    margin-top: 8px;
+}
+
+/*==Slider==*/
+
+.nivo-caption {
+    background-color: transparent;
+    left: 30%;
+    top: 40%;
+}
+
+.nivo-caption h4,.nivo-caption p {
+    font-family: var(--fontTitresMenu);
+    text-transform: uppercase;
+}
+
+.nivo-caption h4{
+    letter-spacing: 20px;
+    font-size: 5.5rem;
+}
+
+.nivo-caption p{
+    font-size: 2.2rem;
+}
+
+.vert {
+    color:var(--couleur2);
+    padding-bottom: 15px;
+    border-bottom: 15px solid white;
+}
