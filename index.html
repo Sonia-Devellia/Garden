@@ -17,11 +17,14 @@
       <div id="Logo"><a href="index.html">G</a></div>
 
       <nav id="Menu">
+        <div id="Burger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <ul>
           <li><a href="index.html" class="Principale">Accueil</a></li>
           <li><a href="#">A&nbsp;propos</a></li>
           <li><a href="Galerie.html">Galerie</a></li>
-          <li><a href="Services.html">Galerie</a></li>
+          <li><a href="Services.html">Services</a></li>
           <li><a href="Contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -41,16 +44,19 @@
                 <p><span class="vert">Pro</span> Design d'exterieurs</p>
             </div>
             <div id="htmlcaption2" class="nivo-html-caption">
-                
+                <h4>JARDIN</h4>
+                <p><span class="vert">dit</span> à la Française</p>
             </div>
             <div id="htmlcaption3" class="nivo-html-caption">
-                
+                <h4>FONTAINE</h4>
+                <p><span class="vert">déco</span> d'extérieur</p>
+            </div>
         </div>
 <!---->
 
       <section id="Enavant">
         <article class="Categories">
-          <a href="#"><img src="images-garden/ampoule.PNG" alt="Idée">
+          <a href="Galerie.html"><img src="images-garden/ampoule.PNG" alt="Idée">
             <h2>Idées de paysage</h2></a>
           <hr size="5" noshade>
           <p>
@@ -61,7 +67,7 @@
           </p>
         </article>
         <article class="Categories">
-          <a href="#"
+          <a href="Galerie.html"
             ><img src="images-garden/goutte.PNG" alt="Goutte" />
             <h2>Irrigation</h2></a>
           <hr size="5" noshade>
@@ -74,7 +80,7 @@
         </article>
 
         <article class="Categories">
-          <a href="#"
+          <a href="Galerie.html"
             ><img src="images-garden/photos.PNG" alt="Photos" />
             <h2>Galerie Photos</h2></a
           >
@@ -150,6 +156,9 @@
     $(window).load(function() {
         $('#slider').nivoSlider();
     });
+$("#Bandeau #Menu #Burger i").click(function(){
+  $("#Bandeau #Menu ul").slideToggle(1500);
+})
 </script>
 
   </body>

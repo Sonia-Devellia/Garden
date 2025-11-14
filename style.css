@@ -82,6 +82,12 @@ body {
     width: 60%;
 }
 
+#Bandeau #Menu #Burger {
+    font-size: 3rem;
+    text-align: right;
+    display: none;
+}
+
 #Bandeau #Menu ul {
     display: flex;
     justify-content: flex-end;
@@ -95,7 +101,7 @@ body {
 
 #Bandeau #Menu ul li a{
     color: black;
-    padding-bottom: 8px;
+    padding-bottom: 11px;
 
 }
 
@@ -315,4 +321,216 @@ a.Bouton {
     color:var(--couleur2);
     padding-bottom: 15px;
     border-bottom: 15px solid white;
+}
+
+.theme-default .nico-controlNav a {
+    background: url(images-garden/blanc.jpg) no-repeat;
+}
+
+.theme-default .nico-controlNav a.active {
+    background: url(images-garden/rouge.jpg) no-repeat;
+}
+
+
+/*Page galerie*/
+
+
+
+#Paysage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2%;
+    margin: 48px 0;
+}
+
+#Paysage .CategoriesPaysage{
+    width: 100%;
+}
+
+#Paysage .CategoriesPaysage #MenuGalerie ul{
+    padding: 48px 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+#Paysage .CategoriesPaysage #MenuGalerie ul li a{
+    background-color: var(--couleur2);
+    color: var(--couleurFondLight);
+    padding: 8px 16px;
+    margin: 0 16px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+#Paysage .CategoriesPaysage #MenuGalerie ul li a:hover{
+    background-color: #064f0d;
+}
+
+#Paysage .CategoriesPaysage #MenuGalerie ul li a.choix{
+    background-color: #064f0d;
+}
+
+#Paysage .Paysage{
+    width: 23%;
+    padding: 1% 0 0;
+    border: 1px solid rgba(128, 128, 128, 0.524);
+    border-radius: 5px;
+    margin-bottom: 16px
+}
+
+#Paysage .Paysage h2 a{
+    color: #000;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+#Paysage .Paysage p{
+    padding: 8px;
+    
+}
+
+#Paysage .Paysage img{
+    display: block;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+}
+/*MODEL GRID POUR LA GALERIE D'IMAGE : 
+CHANGER JUSTE LA PREMIERE SECTION ET ENSUITE TOUT RESTE IDENTIQUE A LA FLEXBOX CI DESSUS:
+
+#Paysage {
+    display: grid;
+    grid-template-oluns: repeat(auto-fill,280px);
+    grid-gap:16px
+    justify-content:center
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 800px){
+    body {
+        background-color:pink;
+    }
+
+    #Bandeau {
+        box-sizing: border-box;
+        align-items: flex-start;
+        padding-top: 24px;
+        padding-left: 3²;
+    }
+
+    #Bandeau #Menu #Burger{
+        display: block;
+        padding-right: 3%;
+    }
+
+    #Bandeau #Menu ul{
+        flex-direction: column;
+        text-align: right;
+        padding-right: 3%;
+        display: none;
+    }  
+
+    #Bandeau #Menu ul li{
+        line-height: 3.2rem;
+    }
+
+    #Bandeau #Menu ul li a{
+        padding-bottom: 0;
+    }
+
+    #Bandeau #Menu ul li a:hover{
+    border-bottom: 10px solid var(--couleur2);
+    }
+
+    #Bandeau #Menu ul li a.Principale {
+    border-bottom: 10px solid var(--couleur2);
+    }
+
+    #Enavant .Categories{
+        width: 48%;
+    }
+
+    #Enavant .Categories:last-child{
+        display: none;
+    }
+
+    /*Page Galerie*/
+
+    #Paysage .Paysage{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 600px){
+    body {
+        background-color: yellow;
+    }
+
+    .slider-wrapper {
+        display: none;
+    }
+
+    #Enavant {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Enavant .Categories{ 
+        width: 98%;
+        margin-bottom: 16px;
+    }
+
+    #Enavant .Categories :last-child{
+        display: flex;
+    }
+
+    #Bienvenue {
+        flex-direction: column;
+        padding: 40px ;
+    }
+
+    #Bienvenue img{
+        display: none;
+    }
+
+    #Bienvenue #TexteListe {
+        width: 95%;
+        
+    }
+
+    #Bienvenue #TexteListe p{
+        width: 100%;
+        line-height: 40px;
+        font-size: 1.4rem;
+    }
+
+    #Bienvenue #TexteListe ul{
+        width: 100%;  
+    }
+
+    #pied {
+        flex-direction: column;
+    }
+
+    #pied .colonne {
+        width: 98%;
+    }
+
+    #pied .colonne p,
+    #pied .colonne address,
+    #pied .colonne .reseaux {
+        text-align: center;
+    }
+
+    #pied .colonne .reseaux{
+        margin-bottom: 16px;
+    }
+
+    /*Page Galerie*/
+
+    #Paysage .Paysage{
+        width: 98%;
+    }
+
 }
