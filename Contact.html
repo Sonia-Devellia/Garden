@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Garden</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+
+  <body>
+    <header id="Bandeau" class="Container">
+      <div id="Logo"><a href="index.html">G</a></div>
+
+      <nav id="Menu">
+        <div id="Burger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul>
+          <li><a href="index.html" class="Principale">Accueil</a></li>
+          <li><a href="#">A&nbsp;propos</a></li>
+          <li><a href="Galerie.html">Galerie</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html" class="on">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+            
+    <main id="contenu" class="container">
+        <h1 class="TitrePage">Nous Contacter</h1>
+        <div id="contact" >
+            <form action="envoyermessage.php" method="post">
+            <p>Civilité : ><br>
+                <input type="radio" name="civilite" id="M"> <Label for="M">M.</Label></p>
+                <input type="radio" name="civilite" id="Mme"> <Label for="Mme">Mme.</Label></p>
+                <input type="radio" name="civilite" id="Autres"> <Label for="Autres">Autres</Label></p>
+            </p>
+
+            <div class="deuxColonnes">
+            <p> <label for="nom">Nom</label><br><input type="text" name="nom" id="nom"></p>
+            <p> <label for="prenom">Prenom</label><br><input type="text" name="prenom" id="prenom"></p>
+            </div>
+            
+            <div class="deuxColonnes">
+            <p> <label for="mail">Email</label><br><input type="email" name="mail" id="mail"></p>
+            <p> <label for="pays">Pays</label><br>
+                        <select name="pays" id="pays">
+                            <option selected>Choisissez votre Pays</option>
+                            <option value="france">France</option>
+                            <option value="allemagne">Allemagne</option>
+                            <option value="usa">USA</option>
+                            <option value="italie">Italie</option>
+                        </select></p>
+            </div>
+
+            <p>
+                Vos préférences<br>
+                <input type="checkbox" name="choix" id="jardin" value="jardin"> <label for="jardin">Jardin</label>
+                <input type="checkbox" name="choix" id="jamenagement" value="amenagement"> <label for="amenagement">Amenagement</label>
+                <input type="checkbox" name="choix" id="irrigation" value="irrigation"> <label for="irrigation">Irrigation</label>
+            </p>
+
+            <p><label for="message">Message</label><br>
+                <textarea name="message" id="message" rows="5" maxlength="200"></textarea>
+            </p>
+
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Annuler">
+        </form>
+        
+        </div>
+
+        
+        <section id="cadre">
+            <div class="iframe"> <h3>Map</h3>
+            <div id="map"></div>
+            </div>
+            <div class="iframe"> <h3>Video</h3>
+            <iframe src="https://www.youtube.com/embed/JQsdXWmLNDE?si=qJK8EGkc9Me0CX4N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </section>
+
+         
+
+    </main>
+
+
+    
+
+
+    <footer id="pied" class="Container">
+        <div class="colonne">
+            <address>
+                <span class="majuscules">Garden </span><br>
+                Za des petits Bois - 56103 Lorient
+                cedex 7
+            </address>
+            <div class="reseaux">
+                <a href="#"><i class= "fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+
+        <div class="colonne">
+            <p><a href="#bandeau"><img src="images-garden/flechehaut.png" alt="retour haut de page"></a></p>
+            <p>&copy;copyright Gretat 2025- <a href="#">Mentions Légales</a></p>
+        </div>
+    </footer>
+
+<!--Script SLider -->
+<script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="scripts/categories.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+$("#Bandeau #Menu #Burger i").click(function(){
+  $("#Bandeau #Menu ul").slideToggle(1500);
+})
+
+</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <script type="text/javascript">
+    var map = L.map('map').setView([47.76786, -3.38378], 13);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+</script>
+
+</body>
+
+</html>

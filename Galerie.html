@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -43,42 +44,44 @@
             <article class="Paysage tout jardins">
               <h2><a href="#">Claustra</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/anis-azhar.jpg" alt="anis-azhar">
+              <a href="galerie/anis-azhar.jpg" data-lightbox="image-1"><img src="galerie/anis-azhar.jpg" alt="anis-azhar"></a>
             </article>
+
             <article class="Paysage tout forets">
               <h2><a href="#">Givre</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/annie-spratt.jpg" alt="annie-spratt">
+              <a href="galerie/annie-spratt.jpg" data-lightbox="image-1"><img src="galerie/annie-spratt.jpg" alt="annie-spratt"></a>
             </article>
+
             <article class="Paysage tout forets">
               <h2><a href="#">Brume</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/annie-spratt2.jpg" alt="annie-spratt2">
+              <a href="galerie/annie-spratt2.jpg" data-lightbox="image-1"><img src="galerie/annie-spratt2.jpg" alt="annie-spratt2"></a>
             </article>
             <article class="Paysage tout jardins">
               <h2><a href="#">Chemin</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/kailash-sankar.jpg" alt="kailash-sankar">
+              <a href="galerie/kailash-sankar.jpg" data-lightbox="image-1"><img src="galerie/kailash-sankar.jpg" alt="kailash-sankar"></a>
             </article>
              <article class="Paysage tout forets jardins">
               <h2><a href="#">Cabane</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/xypher-zhyan.jpg" alt="xypher-zhyan">
+              <a href="galerie/xypher-zhyan.jpg" data-lightbox="image-1"><img src="galerie/xypher-zhyan.jpg" alt="xypher-zhyan"></a>
             </article>
              <article class="Paysage tout jardins">
               <h2><a href="#">Arche</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/peter-li.jpg" alt="peter-li">
+              <a href="galerie/peter-li.jpg" data-lightbox="image-1"><img src="galerie/peter-li.jpg" alt="peter-li"></a>
             </article>
              <article class="Paysage tout forets">
               <h2><a href="#">Sous-Bois</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/maria-hada.jpg" alt="maria-hada">
+              <a href="galerie/maria-hada.jpg" data-lightbox="image-1"><img src="galerie/maria-hada.jpg" alt="maria-hada"></a>
             </article>
             <article class="Paysage tout jardins">
               <h2><a href="#">Plants</a></h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sapiente. Recusandae pariatur ipsa modi consequuntur atque voluptatum iusto, sunt tenetur earum ullam placeat explicabo incidunt. Obcaecati molestiae vero harum dolorem?</p>
-              <img src="galerie/daniel-oberg.jpg" alt="daniel-oberg">
+              <a href="galerie/daniel-oberg.jpg" data-lightbox="image-1"><img src="galerie/daniel-oberg.jpg" alt="daniel-oberg"></a>
             </article>
         </section>
 
@@ -112,6 +115,7 @@
 <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
 <script type="text/javascript" src="scripts/categories.js"></script>
+<script src="scripts/lightbox.js"></script>
 <script type="text/javascript">
     $(window).load(function() {
         $('#slider').nivoSlider();
@@ -120,6 +124,8 @@ $("#Bandeau #Menu #Burger i").click(function(){
   $("#Bandeau #Menu ul").slideToggle(1500);
 })
 </script>
+
+
 
   </body>
 

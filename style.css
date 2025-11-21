@@ -406,6 +406,88 @@ CHANGER JUSTE LA PREMIERE SECTION ET ENSUITE TOUT RESTE IDENTIQUE A LA FLEXBOX C
     justify-content:center
 }
 
+
+/*Page Contact*/
+
+#contact{
+    padding: 40px;
+}
+#contact p{
+    margin: 8px 0;
+}
+.deuxColonnes {
+    display: flex;
+}
+
+.deuxColonnes p {
+    width: 30%;
+}
+#contact input[type=radio],
+#contact input[type=checkbox]{
+    margin-left: 5px;
+}
+
+#contact input[type=text],
+#contact input[type=email], 
+#contact select{
+    padding:8px; 
+    width: 70%;
+}
+
+#contact select{
+    width: 75%;
+}
+
+#contact textarea{
+    width: 85%;
+}
+
+#contact input[type=submit],
+#contact input[type=reset]{
+    padding: 8px 16px;
+    margin: 16px 8px 16px 0px;
+    background-color: var(--couleur2);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+#contact input[type=submit]:hover,
+#contact input[type=reset]:hover {
+    background-color: #075d10;
+}
+
+
+#cadre {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+#cadre .iframe{
+    width: 48%;
+}
+
+#cadre .iframe iframe{
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
 /*Responsive*/
 
 @media screen and (max-width: 800px){
@@ -461,6 +543,11 @@ CHANGER JUSTE LA PREMIERE SECTION ET ENSUITE TOUT RESTE IDENTIQUE A LA FLEXBOX C
     #Paysage .Paysage{
         width: 48%;
     }
+
+    /*Page Contact*/
+
+
+
 }
 @media screen and (max-width: 600px){
     body {
@@ -531,6 +618,32 @@ CHANGER JUSTE LA PREMIERE SECTION ET ENSUITE TOUT RESTE IDENTIQUE A LA FLEXBOX C
 
     #Paysage .Paysage{
         width: 98%;
+    }
+
+    /*Page Contact*/
+
+    .deuxColonnes{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .deuxColonnesp{
+        width: 100%;
+    }
+
+    #contact input[type=text],
+    #contact input[type=email],
+    #contact select{
+        
+        width: 90%;
+    }
+
+    #contact select{
+        width: 95%;
+    }
+
+    #contact textarea{
+        width: 95%;
     }
 
 }
